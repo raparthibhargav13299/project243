@@ -1,0 +1,46 @@
+<div class="row g-0">
+
+    <div class="col-md-4 g-0 center-block">
+        <div class="leftside">
+            <div class="spacer"></div>
+            <div class="heading">
+               <img class="logo" src="../../assets/logo2.png"> LearnZilla
+            </div>
+             
+            <div [formGroup]="logIn" class="signinform">
+
+                <label class="labelstyle" for="exampleInputEmail1">Email or Username</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
+                
+                <label  class="labelstyle" for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Password">
+             
+                <button class="btn-grad-o" (click)="onLogin()" (click)="showSnackbar('Logged in successfully ....','ok','5000')"><span>Login</span></button>
+
+                <div class="register">
+                    <div class="text">
+                        or
+                    </div>
+                   
+                <button (click)="openRegister()" class="btn-grad-w"><span>Create an account</span></button>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+    <div class="col-md-8 g-0 " fxHide fxShow.gt-xs>
+        <div class="rightside">
+            <div class="slogan">
+                Raise your <br><br><br><br>
+                knowledge with us...
+            </div>
+            
+            
+
+        </div>
+    </div>
+
+</div>
+
+

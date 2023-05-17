@@ -1,0 +1,121 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1>{{programName}}</h1>
+    <span class="menu-spacer"></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+
+
+    <div class="accordion" id="accordionPanelsStayOpenExample" *ngFor="let toc of tocArray;let i = index;">
+      <div class="accordion-item">
+
+        <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+          attr.data-bs-target="#panelsStayOpen-collapseOne{{i}}" aria-expanded="false"
+          attr.aria-controls="panelsStayOpen-collapseOne{{i}}">
+          {{toc.parent.innerChild}}
+          <!-- {{toc.child.length()}} -->
+        </button>
+
+        <div>
+
+
+
+
+
+        </div>
+
+
+        <div id="panelsStayOpen-collapseOne{{i}}" class="accordion-collapse collapse"
+          aria-labelledby="panelsStayOpen-headingOne">
+
+          
+            <div class="set1" (click) ="getContent(toc.parent.innerChild,toc.parent.content.document.title) " >
+
+              <div class="example1"  > Document : {{toc.parent.content.document.title}} </div>
+
+            
+              <div class="example2" > -{{toc.parent.content.document.duration}} </div>
+            </div>
+
+     
+        
+
+            <div class="set2" (click) ="getVideo(toc.parent.content.video.title,toc.parent.innerChild) " >
+              <div class="example3" > Video : {{toc.parent.content.video.title}} </div>
+              <div class="example4"> -{{toc.parent.content.video.duration}} </div>
+            </div>
+
+       
+
+        </div>
+
+
+
+        <div>
+
+
+          <div id="panelsStayOpen-collapseOne{{i}}" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingOne">
+
+
+            <div *ngIf="toc.child[0].innerChild!=null">
+              <div *ngFor="let innerConcept of toc.child;let z = index;">
+
+
+                <div class="accordion-item">
+
+                  <button class="accordion-button collapsed childConcept" type="button" data-bs-toggle="collapse"
+                    attr.data-bs-target="#panelsStayOpen-collapseOne{{i}}{{z}}" aria-expanded="false"
+                    attr.aria-controls="panelsStayOpen-collapseOne{{i}}{{z}}">
+                    {{innerConcept.innerChild}}
+
+                  </button>
+
+                  <div id="panelsStayOpen-collapseOne{{i}}{{z}}" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingOne">
+
+                  
+                      <div class="set1">
+
+                        <div class="example1"> Document : {{innerConcept.content.document.title}} </div>
+                        <div class="example2"> -{{innerConcept.content.document.duration}} </div>
+                      </div>
+
+              
+                 
+
+                      <div class="set2">
+                        <div class="example3"> Video : {{innerConcept.content.video.title}} </div>
+                        <div class="example4"> -{{innerConcept.content.video.duration}} </div>
+                      </div>
+
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <app-program-video-player [documentObject]="documentObject"></app-program-video-player>  
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

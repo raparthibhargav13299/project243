@@ -1,0 +1,44 @@
+<div>
+  <mat-card
+    class="mat-elevation-z4 programcard"
+    fxLayout="column"
+    (click)="levelSelectionDialogBox(program.domainName)"
+  >
+    <mat-card-header>
+      <mat-card-title>{{ program.programTitle }}</mat-card-title>
+      <mat-card-subtitle>
+        {{ program.domainName }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="{{ retrievedImage }}"
+      alt="Photo of Cosmetology"
+      fxFlex="70%"
+    />
+    <mat-card-content>
+      <p
+        matTooltip="{{ program.description }}"
+        matTooltipPosition="below"
+        class="program-description"
+      >
+        {{ program.description | slice: 0:100 }}
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions fxLayout="row" fxLayoutGap="70%">
+      <div class="value" fxLayout="row">
+        <mat-icon>timer</mat-icon>
+        <div>{{ program.duration }} days</div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="right">
+        <mat-icon class="create-icon" (click)="createContent(program)"
+         *ngIf="generateConcept" matTooltip = "Generate Content" >add</mat-icon>
+      </div>
+
+      <!-- <div class="button" fxLayout="row" fxLayoutAlign=" center" fxLayoutGap="10%" fxLayout.xs="column">
+      <button type="button"  class="btn btn-secondary " (click)="createContent(program)">Create Content</button>
+      </div> -->
+    </mat-card-actions>
+  </mat-card>
+</div>

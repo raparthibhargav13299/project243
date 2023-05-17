@@ -1,0 +1,14 @@
+.video{
+  margin-top: 2%;
+  /* margin-left: 17%; */
+  height: 600px;
+  width: 1000px;
+}
+.frame
+{
+  border:2px solid black;
+  margin:auto;
+  padding:auto;
+  justify-content: center;
+  align-items: center;
+}

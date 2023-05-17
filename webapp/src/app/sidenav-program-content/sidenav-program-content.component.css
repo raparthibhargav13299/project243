@@ -1,0 +1,76 @@
+mat-sidenav {
+  width: 25%;
+}
+
+.accordion-button{
+ background-color: #808080;
+ word-wrap: break-word;
+ word-break: break-all;
+
+}
+.example1{
+
+width: 80%;
+word-wrap: break-word;
+word-break: break-all;
+font-size: medium;
+margin-bottom: 3%;
+margin-top: 3%;
+margin-left: 5%;
+/* color: #0040ff; */
+
+}
+.example2{
+width: 20%;
+word-wrap: break-word;
+word-break: break-all;
+float:right;
+font-size: medium;
+margin-bottom: 3%;
+margin-top: 3%;
+margin-left: 5%;
+/* color: #0040ff; */
+}
+
+.set1{
+display: flex;
+border: solid 1px #746d6f;
+width: 100%;
+min-height: 50px;
+font-size: medium;
+
+
+
+}
+.set2{
+display: flex;
+border: solid 1px #746d6f;
+width: 100%;
+min-height: 50px;
+
+}
+
+.example4{
+width: 20%;
+float:right;
+margin-bottom: 3%;
+margin-top: 3%;
+font-size: medium;
+margin-left: 5%;
+/* color: #0040ff; */
+}
+.example3{
+width: 80%;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-size:medium;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  margin-left: 5%;
+  /* color: #0040ff; */
+ 
+}
+.childConcept{
+  background-color: #f2f2f2;
+ 
+}

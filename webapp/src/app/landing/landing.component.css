@@ -1,0 +1,195 @@
+html,
+body
+{
+    height: 100%;
+}
+
+body
+{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: #6c6f73;
+}
+
+h1,h2,h3,h4,h5
+{
+    color: #333;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+#stage
+{
+    /* background: url('src\assets\Landing-Page-1.jpg') center center no-repeat; */
+    background-image: linear-gradient(to right bottom, #000000, #0B0005, #11000E, #100018, #080120);
+    background-size: cover;
+    /* color: black; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items:center;
+}
+
+#stage-caption
+{
+    font-size: 1.4rem;
+    font-weight: 200;
+    max-width: 60rem;
+    margin: 0 0 0 50%;
+    text-align: left;
+}
+
+#stage-caption h1
+{
+    color: #eee;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+}
+
+#stage-caption p
+{
+    color: #eee;
+    font-size:large;
+    font-weight:bolder;
+}
+
+#stage-caption a
+{
+    padding: 5px;
+    margin: 0 0 0 5px;
+}
+
+#feature-one
+{
+    padding: 2rem;
+    background-color: #181818;
+    color:#eee;
+}
+
+#feature-one h2
+{
+    color: #eee;
+}
+
+.card, .card-title
+{
+    background-color: #222;
+    color: #eee;
+}
+
+/* .feature-content
+{
+    padding: 8rem 0;
+    overflow: hidden;
+
+} */
+
+.feature-content img
+{
+    height: auto;
+    width: auto;
+}
+
+#feature-two
+{
+    /* background: url('src\assets\Feature-2.jpg') center center no-repeat; */
+    background-image: linear-gradient(to right bottom, #000000, #0B0005, #11000E, #100018, #080120);
+    background-size: cover;
+    color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items:center;
+}
+
+#feature-caption
+{
+    font-size: 1.4rem;
+    font-weight: 200;
+    max-width: 60rem;
+    margin: 0 50% 0 10%;
+    text-align: left;
+}
+
+#feature-caption h1
+{
+    color: #eee;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+}
+
+#feature-caption p
+{
+    color: #eee;
+    font-size:large;
+    font-weight:bolder;
+}
+
+#feature-caption a
+{
+    padding: 5px;
+    margin: 0 0 0 5px;
+}
+
+#feature-three
+{
+    background: #222;
+    color: #eee;
+    padding: 7rem;
+    overflow: hidden;
+}
+
+#feature-three h2
+{
+    color: #eee;
+}
+
+.feature-alt
+{
+    background: #f0f0f0;
+}
+
+#feature-four
+{
+    padding: 4rem;
+    display: flex;
+    margin: 0;
+}
+
+#feature-four h1
+{
+    font-size: 28px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+#main-footer
+{
+    background: #262F36;
+    color: white;
+    padding: 6rem 0;
+    font-size: 0.8rem;
+}
+
+#main-footer h6
+{
+    color: #718FA9;
+}
+
+#main-footer a
+{
+    color: #6C6F73;
+}
+
+@media screen and (min-width: 991px)
+{
+    .feature-content
+    {
+        display: flex;
+        align-items: center;
+    }
+}
+
